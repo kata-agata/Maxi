@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-09-28, 20:56:21
+    Author     : agataj
+*/
+
+/***************** components styles***********************/
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+     outline: none;
+}
+header {
+    overflow: hidden;
+    max-height: 55vh;
+}
+
+#main {
+    padding-top:70px;
+}
+
+.navbar {
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  color: black;
+  background-color:  #fff;
+}
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* fixed to top styles */
+.affix.navbar {
+  background-color: black;
+  color: white;   
+} 
+
+.navbar .nav-item>a{
+    color:black;
+}
+
+.affix.navbar .nav-item>a, 
+.affix.navbar .navbar-brand {
+    color: white;
+    font-size: 1.2rem;
+    font-weight:500;
+    transition: all 0.55s ease-in-out;
+}
+
+.header-bg{
+
+}
