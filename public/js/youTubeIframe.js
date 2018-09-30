@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -23,6 +17,7 @@ function onYouTubeIframeAPIReady() {
         fs: 0,
         modestbranding: 1,
         showInfo: 0,
+
         events: {
             'onReady': onPlayerReady,
             'onError': onPlayerError,
@@ -37,8 +32,8 @@ function onPlayerReady(event) {
 //        event.target.playVideo();       
 
     if (window.matchMedia('(min-width: 769px)').matches) {
+        console.log("player should start");
         var embedCode = event.target.getVideoEmbedCode();
-        player.seekTo(63);
         event.target.mute();
         event.target.playVideo();
         if (document.getElementById('videoFrame')) {
@@ -46,6 +41,7 @@ function onPlayerReady(event) {
         }
     } else if (!window.matchMedia('(min-width: 769px)').matches) {
         player.stopVideo();
+        console.log("player stopped!");
     }
 }
 
@@ -55,6 +51,18 @@ function onPlayerError(event) {
 
 function onStateChange(event) {
     event.target.mute();
-    event.target.playVideo();
+//    //event.target.playVideo();
+    if (event && event.data === 1) {
+//        var videoHolder = document.getElementById('video-holder');
+//        if (videoHolder && videoHolder.id) {
+//            videoHolder.classList.remove('loading');
+ //       }
+        console.log("on state change show picture");
+        
+   } else if (event && event.data === 0) {
+//        event.target.mute();
+//        event.target.playVideo();    
+//        console.log("on state change play video");
+    }
 
 }

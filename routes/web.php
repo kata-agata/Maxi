@@ -23,6 +23,10 @@ use App\Models\Photo;
 Route::get('/', function(){
 
     
+    return view('offers');
+});
+
+Route::get('/welcome', function(){ 
     return view('welcome');
 });
 
@@ -31,10 +35,7 @@ Route::get('/lang/{lang?}', function($lang=NULL){
     return view('welcome');
 })->name('lang');
 
-Route::get('/offers', function(){
 
-    return view('offers');
-})->name('lang');
 
 Auth::routes();
 
