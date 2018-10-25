@@ -13,6 +13,7 @@
 
 use App\Models\Photo;
 
+
 /*Route::get('/', function () {
     
     $photos = Photo::all();
@@ -20,13 +21,8 @@ use App\Models\Photo;
     return view('welcome', compact('photos'));
 });*/
 
-Route::get('/', function(){
 
-    
-    return view('offers');
-});
-
-Route::get('/welcome', function(){ 
+Route::get('/', function(){ 
     return view('welcome');
 });
 

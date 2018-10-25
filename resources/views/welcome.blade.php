@@ -1,17 +1,39 @@
 @extends('layouts.layout')
 
-@section('scripts')
-<script type="text/javascript" src="js/youTubeIframe.js"></script>
+@section('styles')
+<link rel="stylesheet" href="{{ URL::asset('css/offers.css')}}">
+<link rel="stylesheet" href="{{ URL::asset('css/realizations.css')}}">
 @stop
 
-
 @section('header-img')
-<img src="http://www.maxiskippers.pl/img/tlo2.jpg" class="img-fluid w-100 header-bg"/>
-<!--<div class="embed-responsive embed-responsive-16by9 intro-video hidden-xs"> Video hides on xs screen size
-    <div id="videoFrame"></div>  Video is loaded by YouTube API from youtubeVideo.js, all settings there 
+<div class='header-photo'>
+    <img src="http://www.maxiskippers.pl/img/header.jpg" class="img-fluid w-100 header-bg"/>
+</div>
+<!--<div class="video-background">  
+    <div class="video-holder"> Video hides on xs screen size
+        @youtube('<iframe src="https://www.youtube.com/embed/D4MXowfOmII"></iframe>')
+    </div>
 </div>-->
 @endsection
 
 @section('content')
-<div>Home page</div>
+<section id='offersSection' class="container-fluid">
+    @include('sections.offersSection')
+    <div id="shorts">@include('sections.offersShorts')</div>
+</section>
+<section id="realizationsSection" class="container-fluid h-100">
+    @include('sections.realizations')
+</section>
+<section id="tags1" class="container-fluid">
+ @include('layouts.tags')
+</section>
+<section id="eventsSection" class="container-fluid h-100">
+    @include('sections.events')
+</section>
+<section id="aboutus" class="container-fluid text-white" style="background-color: black">
+ @include('sections.about')
+</section>
+<section id="contact" class="container-fluid" style="background-color: white">
+ @include('sections.contact')
+</section>
 @endsection

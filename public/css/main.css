@@ -9,39 +9,99 @@ and open the template in the editor.
 */
 
 /***************** components styles***********************/
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    /*font-family: 'Krub', sans-serif;*/
+    position: relative;
+}
+
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
-     outline: none;
+    outline: none;
 }
 header {
     overflow: hidden;
-    max-height: 55vh;
+    max-height: 45vh;
 }
 
 #main {
     padding-top:70px;
 }
 
+/**************************NAVBAR*************************/
 .navbar {
-  border-radius: 0;
-  transition: all 0.3s ease-in-out;
-  color: black;
-  background-color:  #fff;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    background-color:  #fff;
+    height: 20vh;
+}
+/*LOGO*/
+.navbar-brand{ 
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: margin-left .75s ease-in-out;
+    height: 100%;
 }
 
+.logo-text{
+    font-size: 1.4rem;
+    font-weight: 700;
+    
+}
+
+.logo{
+    height: 100%;
+}
+/*navigation items*/
+.navbar-nav{
+    visibility: hidden; 
+}
+
+
+@media (max-width: 575.98px) {
+    .navbar-nav{
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+/*hamburger button*/
+.navbar-toggler{
+    visibility: hidden;  
+}
+
+
 .affix {
-  position: fixed!important;
-  top: 0!important;
-  right: 0!important;
-  left: 0!important;
-  z-index: 1030!important;
+    position: fixed!important;
+    top: 0!important;
+    right: 0!important;
+    left: 0!important;
+    z-index: 1030!important;
+    height: 75px;
 }
 
 /* fixed to top styles */
 .affix.navbar {
-  background-color: black;
-  color: white;   
+    background-color: black;
+    color: white;   
 } 
+
+.affix .navbar-brand{
+    margin-left: 80px;
+    transition: margin-left .75s ease-in-out;
+}
+
+.affix .navbar-nav{
+    visibility: visible;
+    transition: visibility .55s linear 0.2s;
+}
+
+.affix .navbar-toggler{
+    visibility: visible;
+    transition: visibility .55s linear 0.2s;
+    color: white;
+}
 
 .navbar .nav-item>a{
     color:black;
@@ -58,4 +118,105 @@ header {
 #videoFrame{
     z-index: 1050!important;
 }
+.video-background{
+    background: black;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -20;
+}
 
+.video-holder{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: black;
+    height: 100%;
+    width:100%;
+    pointer-events: none;
+    z-index: -20;
+
+}
+
+.video-cover, .video-holder iframe{
+    z-index: 20;
+    opacity: 0.6;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    left: 0;
+    top:0;
+    background-color: black;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-holder { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-holder { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+    .vid-info { width: 50%; padding: .5rem; }
+    .vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+    .vid-info .acronym { display: none; }
+}
+
+.img-cover{
+    z-index: 20;
+    opacity: 0.6;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    left: 0;
+    top:0;
+    background-color: black;
+}
+
+#tags1{
+    padding-bottom: 30px;
+}
+
+#eventsSection{
+    padding-bottom: 30px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    margin:auto;
+}
+
+#contact{
+    margin-top:20px;
+    margin-bottom: 20px;
+    
+}
+
+.skipperHr{
+    border-color: white;
+    width:60%;
+    margin-top:0!important;
+    margin-bottom:0!important;
+}
+
+.nav-link.active{
+    background-color: #009999;
+    border-radius: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#aboutus{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+#language{
+    position: fixed;
+    top:75px;
+    right: 0;
+    left:0;
+    visibility: hidden;
+}

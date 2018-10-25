@@ -10,7 +10,8 @@
         @include('layouts.scripts')
 
     </head>
-    <body style='height:5000px'>
+    <body data-spy="scroll" data-target="#maxi-navbar" data-offset="200">
+
 
         @include('layouts.header')
         @include('layouts.navbar')
