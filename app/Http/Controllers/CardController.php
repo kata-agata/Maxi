@@ -83,9 +83,9 @@ class CardController extends Controller {
     public static function cardsData() {
         $locale = App::getLocale();
         if ($locale === 'pl') {
-            $cards = DB::table('cards')->select('title_en as id', 'title_pl as title','desc_pl as desc','img_link')->get();
+            $cards = DB::table('cards')->select('id as no', 'title_en as id', 'title_pl as title','desc_pl as desc','img_link')->get();
         } else {
-            $cards = DB::table('cards')->select('title_en as id', 'title_en as title','desc_en as desc','img_link')->get();
+            $cards = DB::table('cards')->select('id as no','title_en as id', 'title_en as title','desc_en as desc','img_link')->get();
         }
         return $cards;
     }

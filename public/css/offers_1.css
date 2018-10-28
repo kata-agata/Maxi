@@ -1,0 +1,174 @@
+/***********************OFFERS SECTION*********************/
+#offersSection{
+    height: auto;
+    background-color: white;
+    z-index: 50;
+}
+
+#shorts{
+    margin-top: 70px;
+}
+
+@media (min-width: 1500px){
+    #offersSection{
+        width: 80%;
+    }
+}
+
+.masonry-item{
+    max-height: 100%;
+}
+
+.badges-row{
+    transition: all 0.55s ease-in-out;
+}
+
+.maxi-badge-svg{
+    max-height: 100px;
+}
+
+.maxi-badge-title{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.hover-card{
+    overflow: hidden;
+
+}
+
+.hover-card-bg{
+    height: auto;
+    width:auto;
+    transition: all 0.55s ease-in-out;
+}
+
+img.hover-card-bg{
+    overflow: hidden;
+}
+
+.hover-card-overlay{
+    position: absolute;
+    top: -100%;
+    bottom: 100%;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: hidden;
+    transition: all 0.55s ease-in-out;
+    color: white;
+}
+
+.hover-card-overlay .btn{
+    position: absolute;
+    left:50%;
+    top:80%;
+    transform: translate(-50%,-50%);
+}
+
+    .card-text{
+        padding: 15px;
+    }
+
+.maxi-card:hover > .hover-card-overlay{
+    visibility: visible;
+    top:0;
+    bottom: 0;
+    color: white;
+}
+
+.maxi-card:hover > .hover-card > img.hover-card-bg{
+    transform: translateY(-20px);
+}
+
+.maxi-card:hover > .ch-card-title{
+    bottom: 0;
+    font-size: 1rem;
+}
+
+.maxi-card{
+  margin-top:2px;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+.card-text-title{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media (min-width: 1200px){
+    .maxi-short{
+        width:80%;
+        margin: auto;
+    }
+    .card-text{
+        padding: 30px;
+    }
+}
+
+.ch-card-title{
+    color: white;
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    transition: all 0.55s ease-in-out;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+ul {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+.map-buttons-group{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.map-buttons-group-title{
+    font-size:1.2em;
+    font-weight: 800;
+    color: #009999;
+}
+
+#map-buttons{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.faq{
+    padding: 3px;
+}
+
+.faq-question{
+    background-color: #009999;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.faq-answer .card-body{
+    text-align: justify;
+    display: inline-flex;
+}
+.fa-hand-point-right{
+    font-size: 2rem;
+    color: #009999;
+}
+
+.fa-lightbulb{
+    font-size: 2rem;   
+    color: black;
+}

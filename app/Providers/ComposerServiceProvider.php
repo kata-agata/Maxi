@@ -22,6 +22,12 @@ class ComposerServiceProvider extends ServiceProvider {
         View::composer(
                 'sections.realizations', 'App\Http\ViewComposers\RealizationsComposer'
         );
+        View::composer(
+                'sections.charters.yachtTypes', 'App\Http\ViewComposers\OfferShortComposer'
+        );
+        View::composer(
+                'sections.charters.faq', 'App\Http\ViewComposers\FaqComposer'
+        );
     }
 
     /**

@@ -31,6 +31,15 @@ Route::get('/lang/{lang?}', function($lang=NULL){
     return view('welcome');
 })->name('lang');
 
+//Route::prefix('lang')->group(function(){
+//    Route::get('/charters',function(){
+//        return view('charters');
+//    })->name('charters');
+////});
+    
+    
+//Route::get('/charters', 'ChartersMapController@index')->name('charters');
+ Route::get('/charters/{map}', 'ChartersMapController@show')->name('charters');
 
 
 Auth::routes();
@@ -40,3 +49,5 @@ Route::get('/home', 'HomeController@index');
 Route::resource('photos', 'PhotoController');
 
 Route::resource('posts', 'PostController');
+
+Route::resource('faqs', 'FaqController');
